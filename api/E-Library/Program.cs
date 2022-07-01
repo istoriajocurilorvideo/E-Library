@@ -8,6 +8,8 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 
+builder.Services.AddScoped<UnitOfWork>();
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ELibraryDbContext>(options =>
