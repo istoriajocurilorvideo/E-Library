@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1bCTy8NFHFHNesOWFqcRs96PDmRJZAcblbeDhdePsPyqWgZ/14yJcLG218oGFx02trwY/U/npno2nKmshV0UyA==",
+  "dgSpecHash": "30fCj5fGjmWcwhzGV+C+70oJM5N/I8RZ77F4fzPoYHbi18x7j8qKUx4ffx9dl8/T0XbXWuDVc78ZEqa5JZ6nkQ==",
   "success": true,
-  "projectFilePath": "E:\\Work\\Proiecte\\E-Library-commits\\c2\\api\\E-Library\\E-Library.csproj",
+  "projectFilePath": "E:\\Work\\Proiecte\\E-Library-commits\\c3 - migrations\\api\\E-Library\\E-Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Alin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.4\\microsoft.aspnetcore.authentication.jwtbearer.6.0.4.nupkg.sha512",
