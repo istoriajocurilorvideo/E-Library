@@ -49,6 +49,7 @@ namespace ELibrary.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public BookResponse? Create([FromBody] BookRequest book)
         {
             var newBook = UnitofWork.BookRepository.Create(book.ISBN, book.Intro, book.Title, book.Description, book.Genres, book.Authors);
@@ -61,6 +62,7 @@ namespace ELibrary.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public BookResponse? Update([FromBody]BookRequest book)
         {
             var updatedBook = UnitofWork.BookRepository.Update(book.Id, book.ISBN, book.Intro, book.Title, book.Description, book.Genres, book.Authors);
@@ -72,6 +74,7 @@ namespace ELibrary.Controllers
             return new BookResponse(updatedBook);
         }
 
+        [Authorize(Roles = "admin")]
         public BaseResponse UpdateFile(int bookId, IFormFile file)
         {
             if (file?.Length > 0)
@@ -90,6 +93,7 @@ namespace ELibrary.Controllers
             return new BaseResponse() { IsOk = true };
         }
 
+        [Authorize(Roles = "admin")]
         public BaseResponse UpdateCover(int bookId, IFormFile file)
         {
             if (file?.Length > 0)
@@ -108,6 +112,7 @@ namespace ELibrary.Controllers
             return new BaseResponse() { IsOk = true };
         }
 
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             UnitofWork.BookRepository.Delete(id);

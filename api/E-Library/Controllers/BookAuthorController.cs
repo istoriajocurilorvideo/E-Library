@@ -27,6 +27,7 @@ namespace ELibrary.Controllers
 
         public IEnumerable<BookAuthorSummaryResponse> GetSummary() => UnitofWork.BookAuthorRepository.GetSummary().Select(x => new BookAuthorSummaryResponse(new BookAuthorResponse(x.Item1), x.Item2)).ToList();
 
+        [Authorize(Roles = "admin")]
         public BookAuthorResponse? Update(int id, string name)
         {
             var updatedBookAuthor = UnitofWork.BookAuthorRepository.Update(id, name);
@@ -38,6 +39,7 @@ namespace ELibrary.Controllers
             return new BookAuthorResponse(updatedBookAuthor);
         }
 
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             UnitofWork.BookGenreRepository.Delete(id);

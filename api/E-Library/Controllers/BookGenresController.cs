@@ -28,6 +28,7 @@ namespace ELibrary.Controllers
         
         public IEnumerable<BookGenreSummaryResponse> GetSummary() => UnitofWork.BookGenreRepository.GetSummary().Select(x => new BookGenreSummaryResponse(new BookGenreResponse(x.Item1), x.Item2)).ToList();
 
+        [Authorize(Roles = "admin")]
         public BookGenreResponse? Create([FromBody] BookGenre newGenre)
         {
             var updatedBookGenre = UnitofWork.BookGenreRepository.Create(newGenre.Name);
@@ -36,6 +37,7 @@ namespace ELibrary.Controllers
             return new BookGenreResponse(updatedBookGenre);
         }
 
+        [Authorize(Roles = "admin")]
         public BookGenreResponse? Update([FromBody]BookGenre bookGenre)
 
         {
@@ -48,6 +50,7 @@ namespace ELibrary.Controllers
             return new BookGenreResponse(updatedBookGenre);
         }
 
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             UnitofWork.BookGenreRepository.Delete(id);

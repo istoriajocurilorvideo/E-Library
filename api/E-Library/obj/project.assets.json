@@ -2065,11 +2065,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Work\\Proiecte\\E-Library-commits\\c3 - migrations\\api\\E-Library\\E-Library.csproj",
+      "projectUniqueName": "E:\\Work\\Proiecte\\E-Library-commits\\c4\\api\\E-Library\\E-Library.csproj",
       "projectName": "E-Library",
-      "projectPath": "E:\\Work\\Proiecte\\E-Library-commits\\c3 - migrations\\api\\E-Library\\E-Library.csproj",
+      "projectPath": "E:\\Work\\Proiecte\\E-Library-commits\\c4\\api\\E-Library\\E-Library.csproj",
       "packagesPath": "C:\\Users\\Alin\\.nuget\\packages\\",
-      "outputPath": "E:\\Work\\Proiecte\\E-Library-commits\\c3 - migrations\\api\\E-Library\\obj\\",
+      "outputPath": "E:\\Work\\Proiecte\\E-Library-commits\\c4\\api\\E-Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
