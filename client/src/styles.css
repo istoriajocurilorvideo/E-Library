@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+.modal {
+    z-index: 1060;
+  }
+  .p-multiselect .p-multiselect-label{
+    padding: 0px!important;
+}
