@@ -9,8 +9,14 @@ import { GenresService } from './genres.service';
 import { BooksService } from './books.service';
 import { BookFilesService } from './bookfiles.service';
 
+import { JoinPipe } from '../pipes/array.join.pipe';
+import { SelectDirective } from '../select.directive';
+import { AuthInterceptor, httpInterceptorProviders } from '../auth/auth.interceptor';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthService } from '../auth/auth.service';
+
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { AuthGuard } from '../auth/auth.guard';
 
 @NgModule({
   providers: [
@@ -18,9 +24,15 @@ import { AuthService } from '../auth/auth.service';
     BookFilesService,
     GenresService,
     BooksService,
+    AuthService,
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService,
+    AuthGuard,
   ],
   declarations: [
     AuthLoginComponent,
+    JoinPipe,
+    SelectDirective
   ],
   imports: [
     BrowserAnimationsModule,
@@ -28,6 +40,9 @@ import { AuthService } from '../auth/auth.service';
     FormsModule,
     ReactiveFormsModule,
     MultiSelectModule
+  ],
+  exports: [
+    JoinPipe
   ]
 })
 export class CoreModule { }
