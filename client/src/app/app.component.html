@@ -13,7 +13,30 @@
     <div class="sidebar">
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        
+          <li class="nav-item">
+            <a routerLink='/books' class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Books
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink='/authors' class="nav-link">
+              <i class="nav-icon fa fa-user-edit"></i>
+              <p>
+                Authors
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink='/genres' class="nav-link">
+              <i class="nav-icon fab fa-hive"></i>
+              <p>
+                Genres
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -31,3 +54,5 @@
     </section>
   </div>
 </div>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

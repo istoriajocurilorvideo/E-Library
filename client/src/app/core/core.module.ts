@@ -9,6 +9,10 @@ import { GenresService } from './genres.service';
 import { BooksService } from './books.service';
 import { BookFilesService } from './bookfiles.service';
 
+import { AuthorListComponent } from '../authors/author-list/author-list.component';
+import { AuthorCreateComponent } from '../authors/author-create/author-create.component';
+import { GenresComponent } from '../genres/genres.component';
+
 import { JoinPipe } from '../pipes/array.join.pipe';
 import { SelectDirective } from '../select.directive';
 import { AuthInterceptor, httpInterceptorProviders } from '../auth/auth.interceptor';
@@ -17,7 +21,6 @@ import { AuthService } from '../auth/auth.service';
 
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { AuthGuard } from '../auth/auth.guard';
-
 @NgModule({
   providers: [
     AuthorsService,
@@ -28,8 +31,12 @@ import { AuthGuard } from '../auth/auth.guard';
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     JwtHelperService,
     AuthGuard,
+    httpInterceptorProviders
   ],
   declarations: [
+    AuthorListComponent,
+    AuthorCreateComponent,
+    GenresComponent,
     AuthLoginComponent,
     JoinPipe,
     SelectDirective
